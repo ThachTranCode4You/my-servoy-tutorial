@@ -1,0 +1,10 @@
+.svy-sidenav {
+    width: 100% !important;
+    min-width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+.svy-sidenav-container {
+    width: 100% !important;
+}

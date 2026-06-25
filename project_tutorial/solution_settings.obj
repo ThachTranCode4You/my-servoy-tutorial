@@ -1,0 +1,15 @@
+{
+    "customProperties":{
+        "authenticator":{
+            "type":1
+        }
+    },
+    "firstFormID":"5C636EEA-A98D-46A4-AD65-C490C706D916",
+    "loginFormID":"5741912C-715B-4DA2-B5DA-BD09D2EBE029",
+    "modulesNames":"svyUtils,svySearch,mod_auth,mod_ui_base,svyProperties,svyNavigation,svySecurity,mod_migration",
+    "onOpenMethodID":"5C3828F7-C881-4A85-9B98-B9C14A14A280",
+    "styleSheetID":"9E3D637B-1BFB-4ACD-A0CA-8377E159FD63",
+    "typeid":43,
+    "uuid":"7CBA9ECD-F08B-4C84-A988-AF4705E8ADE9",
+    "version":"1.0"
+}
