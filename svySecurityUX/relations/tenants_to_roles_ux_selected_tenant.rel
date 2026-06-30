@@ -1,0 +1,17 @@
+{
+    "allowCreationRelatedRecords":true,
+    "foreignDataSource":"db:/svy_security/roles",
+    "items":[
+        {
+            "foreignColumnName":"tenant_name",
+            "primaryDataProviderID":"scopes.svySecurityUX.selectedTenant",
+            "typeid":23,
+            "uuid":"DF410FC4-1364-4E8F-B92D-E490FA78FC45"
+        }
+    ],
+    "joinType":1,
+    "name":"tenants_to_roles_ux_selected_tenant",
+    "primaryDataSource":"db:/svy_security/tenants",
+    "typeid":22,
+    "uuid":"55AFC3F8-A470-429D-85C9-7C3C5B0601B2"
+}

@@ -5,6 +5,15 @@
     max-width: 100% !important;
 }
 
+.svy-sidenav-header {
+	text-align: center;
+	width: auto !important;
+}
+
 .svy-sidenav-container {
     width: 100% !important;
+}
+
+.svy-sidenav-item {
+	padding: 0 !important;
 }

@@ -3,6 +3,7 @@
 	<buildpathentry excluding=".stp/|medias/" kind="src" path=""/>
 	<buildpathentry exported="true" kind="prj" path="/mod_auth"/>
 	<buildpathentry exported="true" kind="prj" path="/mod_migration"/>
+	<buildpathentry exported="true" kind="prj" path="/mod_ui_admin"/>
 	<buildpathentry exported="true" kind="prj" path="/mod_ui_base"/>
 	<buildpathentry exported="true" kind="prj" path="/svyNavigation"/>
 	<buildpathentry exported="true" kind="prj" path="/svyProperties"/>

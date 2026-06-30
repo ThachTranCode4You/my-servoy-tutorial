@@ -1,0 +1,31 @@
+/* Lớp cha bao toàn bộ màn hình */
+html, body, .svy-form {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login-page {
+    height: 100vh !important;       
+    width: 100vw !important;        
+    display: flex !important;       
+    justify-content: center !important; 
+    align-items: center !important;     
+    
+  
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20250415/pngtree-rear-view-of-a-cargo-container-ship-sailing-through-deep-sea-image_17184370.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.login-box {
+    width: 400px !important;
+    background-color: white !important;
+    padding: 30px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    display: block !important;
+    
+}
+

@@ -1,0 +1,5 @@
+{
+    "clientOnlyConnections":false,
+    "queryProcedures":false,
+    "sortIgnorecase":false
+}

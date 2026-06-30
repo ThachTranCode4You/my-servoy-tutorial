@@ -3,25 +3,9 @@
         {
             "customProperties":{
                 "extraProperties":{
-                    "NG-Grids":{
-                        "agGridMenuItem":""
-                    },
                     "Navbar":{
-                        "displayType":"BUTTON"
-                    }
-                }
-            },
-            "iconStyleClass":"fa-solid fa-truck",
-            "name":"orders",
-            "styleClass":"text-white",
-            "typeid":53,
-            "uuid":"6EF89CDD-5617-486C-9F39-B441AE600178"
-        },
-        {
-            "customProperties":{
-                "extraProperties":{
-                    "Navbar":{
-                        "displayType":"BUTTON"
+                        "displayType":"BUTTON",
+                        "isActive":true
                     }
                 }
             },
@@ -30,6 +14,25 @@
             "styleClass":"text-white",
             "typeid":53,
             "uuid":"A1BB43DD-7B8B-41B5-AD33-F72A509DB598"
+        },
+        {
+            "customProperties":{
+                "extraProperties":{
+                    "NG-Grids":{
+                        "agGridMenuItem":""
+                    },
+                    "Navbar":{
+                        "displayType":"MENU_ITEM"
+                    },
+                    "Sidenav":{
+                        "formName":"B72BFC37-C97E-4701-82E9-83071FE22642"
+                    }
+                }
+            },
+            "iconStyleClass":"fa-solid fa-ship",
+            "name":"frm_vessels",
+            "typeid":53,
+            "uuid":"3DBDBB35-689F-42C3-98BB-26641570219F"
         }
     ],
     "name":"sidebar",

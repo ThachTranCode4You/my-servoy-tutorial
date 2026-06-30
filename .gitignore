@@ -1,0 +1,12 @@
+
+!project_tutorial/
+!mod_customers/
+!mod_migration/
+!mod_auth/
+!mod_ui_base/
+
+
+.metadata/
+Servers/
+.settings/
+bin/

@@ -1,0 +1,28 @@
+ <form accept-charset="UTF-8" role="form" name="login_form" method="post">
+      <label for="user_name">%%i18n:servoy.logindialog.label.name%%</label>
+      <!-- input name 'user_name' is mandatory -->
+      <input type="text" id="user_name" name=user_name placeholder="%%i18n:servoy.logindialog.label.name%%" required oninvalid="this.setCustomValidity('%%i18n:servoy.logindialog.specify.user_name%%')" oninput="this.setCustomValidity('')">
+
+      <label for="user_password">%%i18n:servoy.logindialog.user_password%%</label>
+      <!-- input name 'user_password' is mandatory -->
+      <input type="user_password" id="user_password" name="user_password" placeholder="%%i18n:servoy.logindialog.user_password%%" required oninvalid="this.setCustomValidity('%%i18n:servoy.logindialog.specify.user_password%%')" oninput="this.setCustomValidity('')">
+
+      <!-- Custom fields -->
+      <label for="custom_region">Region</label>
+      <input type="text" id="custom_region" name="custom_region">
+      
+	  <label for="custom_tenant">Tenant:</label>
+      <select id="custom_tenant" name="custom_tenant">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <!-- End custom fields -->
+
+      <button type="submit">%%i18n:servoy.logindialog.title%%</button>
+      <!-- input name 'remember' is mandatory if you want rememberMe functionality-->
+      <input type="checkbox" id="remember" name="remember" checked>
+      <label for="remember">%%i18n:servoy.logindialog.remember%%</label>
+      <!-- mandatory hidden field with name "id_token" for auto login -->
+      <input name="id_token" type="hidden"/>
+    </form>
