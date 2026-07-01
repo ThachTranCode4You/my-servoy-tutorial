@@ -1,0 +1,43 @@
+{
+    "customProperties":{
+        "formComponent":false,
+        "layout":{
+            "responsive":true
+        }
+    },
+    "extendsID":"339E84F3-B4A0-499E-A519-727F57C85C72",
+    "items":[
+        {
+            "extendsID":"E37D6882-DD6D-4FC3-9E48-9B7DE18FECAA",
+            "items":[
+                {
+                    "json":{
+                        "location":{
+                            "x":512,
+                            "y":193
+                        },
+                        "onActionMethodID":"F816A42E-8862-43F2-ACFC-01ADB582AF62",
+                        "size":{
+                            "height":30,
+                            "width":80
+                        },
+                        "styleClass":"btn btn-warning",
+                        "text":"Import"
+                    },
+                    "location":"512,193",
+                    "name":"button_10",
+                    "size":"80,30",
+                    "styleClass":"btn btn-warning",
+                    "typeName":"bootstrapcomponents-button",
+                    "typeid":47,
+                    "uuid":"D06D3852-CF8B-4D2E-AF5E-502AC472E32E"
+                }
+            ],
+            "typeid":46,
+            "uuid":"A7F72184-D180-428F-8054-FE1C2873742E"
+        }
+    ],
+    "name":"frm_migration",
+    "typeid":3,
+    "uuid":"5C636EEA-A98D-46A4-AD65-C490C706D916"
+}

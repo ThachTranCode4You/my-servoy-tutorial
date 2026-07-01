@@ -1,8 +1,29 @@
+body, html {
+    overflow-x: hidden; /* Chỉ ẩn thanh cuộn ngang */
+}
+
+html, body, .svy-form, .main-container {
+    height: 100% !important;
+}
+
 .svy-sidenav {
     width: 100% !important;
     min-width: 100% !important;
     flex: 0 0 100% !important;
     max-width: 100% !important;
+    padding : 0 !important;
+    left: -1px!important;
+    top: -1px!important;
+}
+
+.col-md-1 {
+    flex: 0 0 auto !important;
+    width: 3.333333% !important;
+}
+
+.col-md-10 {
+    flex: 0 0 auto !important;
+    width: 93.333333% !important;
 }
 
 .svy-sidenav-header {
@@ -12,8 +33,69 @@
 
 .svy-sidenav-container {
     width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .svy-sidenav-item {
 	padding: 0 !important;
 }
+
+.backgroud-nav {
+	background-color: rgb(24, 34, 44) !important;
+}
+
+.bts-extra-navbar.bts-navbar-default .navbar-nav > li > a, .bts-extra-navbar.bts-navbar-default .navbar-nav .dropdown-menu > .dropdown-item, .bts-extra-navbar.bts-navbar-default .navbar-nav .dropdown-menu > .dropdown-item.active, .bts-extra-navbar.bts-navbar-default .navbar-nav .dropdown-menu > .dropdown-item:focus {
+    background-color: rgb(24, 34, 44) !important;
+    color: #FFF;
+}
+
+.bts-extra-navbar.bts-navbar-default .navbar-nav .dropdown-menu {
+	background-color: rgb(24, 34, 44) !important;
+    color: #FFF;
+}
+
+.nav-bar {
+	max-height: 40px;
+	padding: 0px!important;
+	height:40px;
+	background-color: rgb(24, 34, 44);
+	padding: 10px!important;
+}
+
+.logo-image {
+	min-height: 40px !important;
+	height: 40px !important;    /* Ép chiều cao là 40px */
+    width: auto !important;     /* Tự động tính chiều rộng theo tỷ lệ */
+    max-height: 40px !important;
+    display: block;
+    object-fit: contain;
+}
+
+.text-box-nav {
+	width: 125px;
+	height: 25px;
+}
+
+.navbar-expand-lg .navbar-nav {
+	align-items: center;
+}
+
+.dropdown-menu {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    width: 50px !important; /* Đặt chiều rộng tối thiểu cho menu */
+    padding: 5px!important;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important; 
+    text-align: center !important;
+    padding : 10px 0 0 0 ;
+}
+
+
+

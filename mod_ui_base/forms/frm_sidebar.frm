@@ -12,22 +12,24 @@
             "uuid":"50F8BCF0-BD81-43A6-8C2F-E028B3676EA6"
         },
         {
-            "cssPosition":"0,-1,-1,0,105,689",
+            "cssPosition":"-1,-1,-1,-1,51,95%",
             "json":{
+                "containedForm":null,
                 "cssPosition":{
                     "bottom":"-1",
-                    "height":"689",
-                    "left":"0",
+                    "height":"95%",
+                    "left":"-1",
                     "right":"-1",
-                    "top":"0",
-                    "width":"105"
+                    "top":"-1",
+                    "width":"51"
                 },
                 "footerForm":null,
                 "footerFormStickyBottom":true,
                 "onMenuItemSelected":"AF8D2D5D-F574-4FC8-9C90-51C4AC7BF5A9",
                 "servoyMenu":"3C75E25D-15DC-4023-A10D-D3FEC704508E",
-                "sidenavWidth":400,
-                "styleClass":"h-100 text-center p-0 d-flex flex-column svy-sidenav align-items-center"
+                "sidenavWidth":51,
+                "styleClass":"h-100 text-center p-0 d-flex flex-column svy-sidenav align-items-center",
+                "togglePosition":"hide-toggle"
             },
             "name":"sidenav_8",
             "styleClass":"h-100 text-center p-0 d-flex flex-column svy-sidenav align-items-center",
@@ -42,7 +44,6 @@
     "showInMenu":true,
     "size":"640,480",
     "styleClass":"h-100 w-100 h-100 text-center p-0 w-100 d-flex flex-column",
-    "transparent":true,
     "typeid":3,
     "uuid":"72A3772B-F546-43C2-9B96-FA321D325DD4"
 }

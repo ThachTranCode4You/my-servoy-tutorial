@@ -1,155 +1,141 @@
-/**
- * TODO generated, please specify type and doc for the params
- * @param sourceServer
- * @param sourceTable
- * @param targetServer
- * @param targetTable
- * @param mapping
- *
- * @properties={typeid:24,uuid:"1F365F22-510A-40BD-870E-626B8EB73D5A"}
- */
- function importDataGeneric(sourceServer, sourceTable, targetServer, targetTable, mapping,defaults) {
-	    var query = "SELECT * FROM " + sourceTable;
-	    var sourceDS = databaseManager.getDataSetByQuery(sourceServer, query, null, -1);
-	    
-	    	application.output("asdasdas" + sourceDS.getMaxRowIndex());
-	    if (!sourceDS || sourceDS.getMaxRowIndex() === 0) {
-	        application.output("Không có dữ liệu trong bảng nguồn: " + sourceTable);
-	        return false;
-	    }
-	    
-	    var targetFS = databaseManager.getFoundSet(targetServer, targetTable);
-	    
-	    var colIndexMap = {};
-	    var colNames = sourceDS.getColumnNames();
-	    for (var j = 0; j < colNames.length; j++) {
-	        colIndexMap[colNames[j]] = j + 1;
-	    }
-
-	    try {
-	    	for (var i = 1; i <= sourceDS.getMaxRowIndex(); i++) {
-		        var newRecordIndex = targetFS.newRecord();
-		        
-		        var newRec = targetFS.getRecord(newRecordIndex);
-		        
-		        for (var sourceCol in mapping) {
-		            var targetCol = mapping[sourceCol];
-		            var colIndex = colIndexMap[sourceCol];
-		            
-		            if (colIndex) {
-		                var val = sourceDS.getValue(i, colIndex);
-		                if (val != null) {
-		                    newRec[targetCol] = val; 
-		                }
-		            }
-		        }
-		        
-		        for (var col in defaults) {
-		            var val = defaults[col];
-		            if (typeof val === 'function') {
-		                newRec[col] = val();
-		            } else {
-		                newRec[col] = val;
-		            }
-		        }
-
-		        if (!newRec.vessel_uuid) {
-		            newRec.vessel_uuid = application.getUUID().toString();
-		        }
-//		        newRec.tenant_name = 'default' + i; 
-
-		        databaseManager.saveData(newRec);
-		    }
-	    	
-	    } catch (e) {
-	    	application.output("Đã xảy ra lỗi hệ thống: " + e.message);
-	    }
-	    
-	}
-//for (var sourceCol in mapping) {
-//var targetCol = mapping[sourceCol];
-//newRec[targetCol] = sourceDS.getValue(i, sourceDS.getColumnIndex(sourceCol));
-//}
-/**
- * @properties={typeid:24,uuid:"F816A42E-8862-43F2-ACFC-01ADB582AF62"}
- */
-//function importData() {
-//	var userMapping = {
-//		"User": "user_name",    
-//        "Password": "user_password",
-//        "FullName": "display_name"
-//    };
+///**
+// * @param {String} sourceServer
+// * @param {String} sourceTable
+// * @param {String} targetServer
+// * @param {String} targetTable
+// * @param {Object} mapping
+// * @param {Object} defaults
+// *
+// * @properties={typeid:24,uuid:"B7D3CB09-A448-4DA3-8443-881A5B427597"}
+// */
+// function importDataGeneric(sourceServer, sourceTable, targetServer, targetTable, mapping, defaults) {
+//	    var query = "SELECT * FROM " + sourceTable;
+//	    var sourceDS = databaseManager.getDataSetByQuery(sourceServer, query, null, -1);
+//	    
+//	    if (!sourceDS || sourceDS.getMaxRowIndex() === 0) {
+//	        application.output("Không có dữ liệu nguồn: " + sourceTable);
+//	        return false;
+//	    }
 //
-//	var userDefaults = {
-//        "creation_date": new Date(),
-//        "creation_user": "import_system"
-//    };
-//	
-//    // 2. Gọi hàm Generic
-//    var success = importDataGeneric(
-//        'my_mariadb', 
-//        'users',               
-//        'svy_security',    
-//        'users', 
-//        userMapping,
-//		userDefaults
-//    );
-//    
-//    if (success) {
-//        application.output("Import Orders thành công!");
-//    }
-//}
+//	    var targetFS = databaseManager.getFoundSet(targetServer, targetTable);
+//	    var sourceColNames = sourceDS.getColumnNames(); // Danh sách tên cột thật từ DB nguồn
+//
+//	    try {
+//	        for (var i = 1; i <= sourceDS.getMaxRowIndex(); i++) {
+//	            var newRec = targetFS.getRecord(targetFS.newRecord());
+//	            
+//	            // Dùng mapping để map dữ liệu
+//	            for (var srcKey in mapping) {
+//	                var targetCol = mapping[srcKey];
+//	                var foundVal = null;
+//
+//	                // TÌM CỘT NGUỒN: So khớp tên trong mapping với tên trong DB nguồn (không phân biệt hoa thường)
+//	                for (var j = 0; j < sourceColNames.length; j++) {
+//	                    if (sourceColNames[j].toLowerCase() === srcKey.toLowerCase()) {
+//	                        foundVal = sourceDS.getValue(i, j + 1);
+//	                        break;
+//	                    }
+//	                }
+//
+//	                // Gán vào bản ghi mới
+//	                if (foundVal != null) {
+//	                    newRec[targetCol] = foundVal;
+//	                }
+//	            }
+//	            
+//	            // Gán giá trị mặc định
+//	            for (var col in defaults) {
+//	                var val = defaults[col];
+//	                newRec[col] = (typeof val === 'function') ? val() : val;
+//	            }
+//
+//	            // UUID
+//	            newRec.vessel_uuid = application.getUUID().toString();
+//
+//	            databaseManager.saveData(newRec);
+//	        }
+//	        return true;
+//	    } catch (e) {
+//	        application.output("Lỗi import: " + e.message);
+//	        return false;
+//	    }
+//	}
+
+	
 
 /**
- * @properties={typeid:24,uuid:"87C818DA-E40D-47E6-9FF3-E821FEA0234B"}
+ * Script migrate data từ my_mariadb (orderitem) sang code4you (pur_orders)
+ * @properties={typeid:24,uuid:"YOUR-UUID-HERE"}
  */
 function importData() {
-   try {
-	   var vesselMapping = {
-	        "VesselName": "vessel_name",
-	        "IMONo":      "imo_no",
-	        "DWAT":       "dwt",
-	        "NT":         "nrt",
-	        "GT":         "gross_tonnage",
-	        "LOA":        "loa",
-	        "Beam":       "beam",
-	        "Built":      "built_year",
-	        "CallSign":   "call_sign",
-	        "Flag":       "flag_code",
-	        "hidden":     "is_hidden",
-	        "BunkerManifolds": "bunker_manifolds_desc",
-	        "AttachedDocument": "attached_doc_path"
-	    };
+	application.output("Bắt đầu migrate");
+    var sourceQuery = datasources.db.my_mariadb.orderitem.createSelect();
+    var sourcePorts = databaseManager.getFoundSet(sourceQuery);
+    
+    // Lưu ý: Nếu data quá lớn (hàng trăm ngàn dòng), nên cân nhắc dùng paging.
+    sourcePorts.loadAllRecords(); 
+    var totalRecords = sourcePorts.getSize();
+    
+    application.output("Bắt đầu migrate. Tổng số record nguồn: " + totalRecords);
 
-	    var vesselDefaults = {
-	        "created_on":  new Date(),
-	        "modified_on": new Date(),
-	        "created_by_name": "system_import"
-	    };
-	    
-	    if (!databaseManager.getTable('my_mariadb', 'vessel')) {
-            application.output("LỖI: Không tìm thấy bảng vessel trong MariaDB!");
-            return;
+    var targetPorts = databaseManager.getFoundSet("db:/code4you/pur_orders");
+
+    for (var index = 1; index <= totalRecords; index++) {
+        var sourceRecord = sourcePorts.getRecord(index);
+        
+        // Tạo record mới một cách an toàn và lấy ra object record đó
+        var newRecordIndex = targetPorts.newRecord();
+        var targetRecord = targetPorts.getRecord(newRecordIndex);
+
+        // ---------------------------------------------------------
+        // 1. ÁNH XẠ CÁC TRƯỜNG BẮT BUỘC (UUID & Audit fields)
+        // ---------------------------------------------------------
+        targetRecord.order_uuid = application.getUUID().toString();
+        targetRecord.created_on = new Date();
+        targetRecord.created_by_name = "migration_system";
+
+        // ---------------------------------------------------------
+        // 2. MAPPING DỮ LIỆU (MariaDB CamelCase -> Postgres snake_case)
+        // ---------------------------------------------------------
+        // QUAN TRỌNG: Hãy mở bảng "orderitem" trong Servoy Developer (phần Data Providers) 
+        // để xem chính xác tên thuộc tính Servoy đang hiển thị là gì.
+        // Dưới đây dùng toán tử OR (||) để phòng hờ trường hợp sai case.
+        
+        var orderNo = sourceRecord.orderno;
+        targetRecord.client_reference = orderNo; 
+        
+        var itemNo = sourceRecord.itemno;
+        targetRecord.item_no = itemNo; // Đảm bảo bên Postgres đã tạo cột item_no
+        
+        var inquiryDate = sourceRecord.inquirydate;
+        targetRecord.request_date = inquiryDate;
+        
+        var fixingDate = sourceRecord.fixingdate;
+        targetRecord.accepted_on = fixingDate;
+        
+        // Bạn có thể tiếp tục thêm các cột tương ứng ở đây...
+        // targetRecord.ten_cot_snake_case = sourceRecord.TenCotCamelCase;
+    }
+
+    // ---------------------------------------------------------
+    // 3. LƯU DỮ LIỆU VÀ BẮT LỖI
+    // ---------------------------------------------------------
+    // Lưu toàn bộ foundset thay vì lưu từng record sẽ tăng hiệu suất đáng kể
+    var success = databaseManager.saveData(targetPorts);
+    
+    if (!success) {
+        var errors = databaseManager.getFailedRecords(targetPorts);
+        application.output("Migration thất bại. Có " + errors.length + " bản ghi bị lỗi.");
+        
+        for (var i = 0; i < errors.length; i++) {
+            var errorRecord = errors[i];
+            // Lấy exception chi tiết từ Servoy
+            var exceptionMsg = errorRecord.exception ? errorRecord.exception.getMessage() : "Lỗi không xác định (có thể do constraint DB)";
+            application.output("LỖI tại UUID " + errorRecord.order_uuid + ": " + exceptionMsg);
         }
-	    
-        var success = application.output("Bắt đầu import...");
-	    // Gọi hàm Generic của bạn
-	    importDataGeneric(
-	        'my_mariadb', 
-	        'vessel',          
-	        'code4you',    
-	        'global_vessels', 
-	        vesselMapping,
-	        vesselDefaults
-	    );
-	    
-	    if (success) {
-            application.output("Import thành công!");
-        } else {
-        	throw new Error();        }
-	    
-
-   } catch (e) {
-	   application.output("Đã xảy ra lỗi hệ thống: " + e.message);
-   }
+        return false; 
+    } else {
+        application.output('Đã lưu thành công ' + totalRecords + ' bản ghi!');
+        return true;
+    }
 }

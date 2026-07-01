@@ -1,0 +1,20 @@
+{
+    "customProperties":{
+        "formComponent":false,
+        "useCssPosition":true
+    },
+    "encapsulation":108,
+    "items":[
+        {
+            "height":480,
+            "partType":5,
+            "typeid":19,
+            "uuid":"AA2CC7E2-5BA7-4334-908A-7756AF629A3F"
+        }
+    ],
+    "name":"frm_vessel_create",
+    "navigatorID":"-1",
+    "showInMenu":true,
+    "typeid":3,
+    "uuid":"D78371B4-1624-474E-8D0B-6CF3AF021079"
+}

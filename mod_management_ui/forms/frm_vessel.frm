@@ -9,6 +9,16 @@
     "extendsID":"339E84F3-B4A0-499E-A519-727F57C85C72",
     "items":[
         {
+            "customProperties":{
+                "attributes":{
+                    "class":"row h-100 m-0 p-0 col-sidebar"
+                }
+            },
+            "extendsID":"3E29DC6A-CAE3-403C-82A7-FC7D50C1ABC6",
+            "typeid":46,
+            "uuid":"85DE21C3-3CAB-4708-BDD6-C16D7BCBD45F"
+        },
+        {
             "extendsID":"E37D6882-DD6D-4FC3-9E48-9B7DE18FECAA",
             "items":[
                 {
@@ -19,45 +29,53 @@
                                 "headerText":"ID",
                                 "id":"vessel_uuid",
                                 "styleClassDataprovider":null,
-                                "svyUUID":"6C4AFFE2-BA23-4D88-9D79-0D2C058476E4"
+                                "svyUUID":"41AC70D7-9FB8-4E3B-958B-7773075AD7E8"
                             },
                             {
                                 "dataprovider":"vessel_name",
-                                "headerText":"VESSEL NAME",
+                                "headerText":"NAME",
                                 "id":"vessel_name",
                                 "styleClassDataprovider":null,
-                                "svyUUID":"DAEE6E88-B2F5-45D4-9907-31EF19E6153B"
+                                "svyUUID":"FAD74A1D-C750-412A-82BE-41E8352435D1"
+                            },
+                            {
+                                "dataprovider":"dwt",
+                                "headerText":"DWT",
+                                "id":"dwt",
+                                "styleClassDataprovider":null,
+                                "svyUUID":"62151242-22DD-40DF-8E08-40950E1A2693"
                             },
                             {
                                 "dataprovider":"imo_no",
                                 "headerText":"IMO",
                                 "id":"imo_no",
                                 "styleClassDataprovider":null,
-                                "svyUUID":"72191C22-B8FF-4D9E-B821-6738CFA3D641"
+                                "svyUUID":"91F6339C-E3E4-47A2-8ACB-0813657FC2B3"
                             }
                         ],
                         "location":{
-                            "x":524,
-                            "y":177
+                            "x":477,
+                            "y":312
                         },
+                        "responsiveHeight":550,
                         "size":{
                             "height":100,
                             "width":200
                         }
                     },
-                    "location":"524,177",
-                    "name":"table_2",
+                    "location":"477,312",
+                    "name":"table_28",
                     "size":"200,100",
                     "typeName":"servoyextra-table",
                     "typeid":47,
-                    "uuid":"4EB10717-684F-4B8B-BE28-6EEC8527FE59"
+                    "uuid":"848410C7-8C38-4CB9-A4BB-E5FFC583A82B"
                 }
             ],
             "typeid":46,
-            "uuid":"8ED8D8DC-DD70-49F6-9EEA-0120CA0DE46B"
+            "uuid":"EF93F845-F9F2-41CA-8774-D837EE65605F"
         }
     ],
-    "name":"frm_vessels",
+    "name":"frm_vessel",
     "typeid":3,
-    "uuid":"B72BFC37-C97E-4701-82E9-83071FE22642"
+    "uuid":"C64B7A10-9EDB-4573-81FD-59D4D7BE058D"
 }

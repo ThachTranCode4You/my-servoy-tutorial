@@ -21,7 +21,7 @@
                 {
                     "customProperties":{
                         "attributes":{
-                            "class":"row h-100 m-0"
+                            "class":"row h-100 m-0 p-0 col-sidebar"
                         },
                         "properties":{
                             "packagename":"12grid",
@@ -42,6 +42,7 @@
                             "items":[
                                 {
                                     "json":{
+                                        "animation":"slide-left",
                                         "containedForm":"72A3772B-F546-43C2-9B96-FA321D325DD4",
                                         "location":{
                                             "x":391,
@@ -67,21 +68,149 @@
                         {
                             "customProperties":{
                                 "attributes":{
-                                    "class":"col-md-6 h-100"
+                                    "class":"col-md-10 h-100 p-0"
                                 },
                                 "properties":{
                                     "packagename":"12grid",
                                     "specname":"column"
                                 }
                             },
+                            "items":[
+                                {
+                                    "customProperties":{
+                                        "attributes":{
+                                            "class":"row"
+                                        },
+                                        "properties":{
+                                            "packagename":"12grid",
+                                            "specname":"row"
+                                        }
+                                    },
+                                    "items":[
+                                        {
+                                            "customProperties":{
+                                                "attributes":{
+                                                    "class":"col-md-12"
+                                                },
+                                                "properties":{
+                                                    "packagename":"12grid",
+                                                    "specname":"column"
+                                                }
+                                            },
+                                            "items":[
+                                                {
+                                                    "json":{
+                                                        "imageStyleClass":"fa fa-plus",
+                                                        "location":{
+                                                            "x":429,
+                                                            "y":314
+                                                        },
+                                                        "onActionMethodID":"40719E9F-A67F-4657-9613-6A38AA7D6133",
+                                                        "size":{
+                                                            "height":30,
+                                                            "width":80
+                                                        },
+                                                        "styleClass":"btn btn-primary"
+                                                    },
+                                                    "location":"429,314",
+                                                    "name":"button_38",
+                                                    "size":"80,30",
+                                                    "styleClass":"btn btn-primary",
+                                                    "typeName":"bootstrapcomponents-button",
+                                                    "typeid":47,
+                                                    "uuid":"D14BFB4C-46E0-47A5-B3F6-E31A90C714BB"
+                                                },
+                                                {
+                                                    "json":{
+                                                        "location":{
+                                                            "x":478,
+                                                            "y":198
+                                                        },
+                                                        "size":{
+                                                            "height":30,
+                                                            "width":80
+                                                        },
+                                                        "styleClass":"btn btn-danger",
+                                                        "text":"Button"
+                                                    },
+                                                    "location":"478,198",
+                                                    "name":"button_42",
+                                                    "size":"80,30",
+                                                    "styleClass":"btn btn-danger",
+                                                    "typeName":"bootstrapcomponents-button",
+                                                    "typeid":47,
+                                                    "uuid":"D5B8B707-C106-49EE-BA58-74BB3A3DA0A1"
+                                                }
+                                            ],
+                                            "location":"1,1",
+                                            "typeid":46,
+                                            "uuid":"D9D21C9C-F1B8-4611-8C45-E12FE117412E"
+                                        }
+                                    ],
+                                    "location":"439,214",
+                                    "typeid":46,
+                                    "uuid":"C0821BB0-C570-437A-9BC9-5F277B071F69"
+                                }
+                            ],
                             "location":"2,2",
                             "typeid":46,
                             "uuid":"E37D6882-DD6D-4FC3-9E48-9B7DE18FECAA"
                         }
                     ],
-                    "location":"368,111",
+                    "location":"2,2",
                     "typeid":46,
                     "uuid":"3E29DC6A-CAE3-403C-82A7-FC7D50C1ABC6"
+                },
+                {
+                    "customProperties":{
+                        "attributes":{
+                            "class":"row"
+                        },
+                        "properties":{
+                            "packagename":"12grid",
+                            "specname":"row"
+                        }
+                    },
+                    "items":[
+                        {
+                            "customProperties":{
+                                "attributes":{
+                                    "class":"col-md-12"
+                                },
+                                "properties":{
+                                    "packagename":"12grid",
+                                    "specname":"column"
+                                }
+                            },
+                            "items":[
+                                {
+                                    "json":{
+                                        "containedForm":"0CBC2ED3-5DD4-4657-997E-68D7982442E3",
+                                        "location":{
+                                            "x":396,
+                                            "y":184
+                                        },
+                                        "size":{
+                                            "height":100,
+                                            "width":200
+                                        }
+                                    },
+                                    "location":"396,184",
+                                    "name":"formcontainer_5",
+                                    "size":"200,100",
+                                    "typeName":"servoycore-formcontainer",
+                                    "typeid":47,
+                                    "uuid":"5AD20358-2474-407F-8954-3D636FA13A9F"
+                                }
+                            ],
+                            "location":"1,1",
+                            "typeid":46,
+                            "uuid":"FC758F20-226E-4619-9A6D-ED14DF78E1DB"
+                        }
+                    ],
+                    "location":"1,1",
+                    "typeid":46,
+                    "uuid":"4251473E-B6EA-4978-859E-37B4C4B14A7D"
                 }
             ],
             "location":"356,66",

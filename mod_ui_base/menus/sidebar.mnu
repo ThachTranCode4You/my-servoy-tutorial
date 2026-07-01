@@ -19,20 +19,42 @@
             "customProperties":{
                 "extraProperties":{
                     "NG-Grids":{
-                        "agGridMenuItem":""
+                        "agGridMenuItem":"",
+                        "isSeparator":true
                     },
                     "Navbar":{
-                        "displayType":"MENU_ITEM"
+                        "displayType":"MENU_ITEM",
+                        "isActive":true
                     },
                     "Sidenav":{
-                        "formName":"B72BFC37-C97E-4701-82E9-83071FE22642"
+                        "formName":"982BF83C-9DD7-4EEF-BEE7-978ACBB70267"
                     }
                 }
             },
             "iconStyleClass":"fa-solid fa-ship",
-            "name":"frm_vessels",
+            "name":"frm_vessel",
             "typeid":53,
             "uuid":"3DBDBB35-689F-42C3-98BB-26641570219F"
+        },
+        {
+            "customProperties":{
+                "extraProperties":{
+                    "NG-Grids":{
+                        "agGridMenuItem":"",
+                        "isSeparator":true
+                    },
+                    "Navbar":{
+                        "displayType":"MENU_ITEM",
+                        "isActive":true,
+                        "isDivider":false,
+                        "position":"LEFT"
+                    }
+                }
+            },
+            "iconStyleClass":"fa-solid fa-database",
+            "name":"frm_migration",
+            "typeid":53,
+            "uuid":"A31DBEDE-6636-49D4-9FA4-C18321BBC7DD"
         }
     ],
     "name":"sidebar",

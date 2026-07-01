@@ -1,0 +1,38 @@
+{
+    "items":[
+        {
+            "customProperties":{
+                "extraProperties":{
+                    "NG-Grids":{
+                        "agGridMenuItem":""
+                    },
+                    "Navbar":{
+                        "displayType":"BUTTON"
+                    }
+                }
+            },
+            "iconStyleClass":"fa-solid fa-truck",
+            "name":"orders",
+            "styleClass":"text-white",
+            "typeid":53,
+            "uuid":"6EF89CDD-5617-486C-9F39-B441AE600178"
+        },
+        {
+            "customProperties":{
+                "extraProperties":{
+                    "Navbar":{
+                        "displayType":"BUTTON"
+                    }
+                }
+            },
+            "iconStyleClass":"fa-solid fa-user",
+            "name":"customers",
+            "styleClass":"text-white",
+            "typeid":53,
+            "uuid":"A1BB43DD-7B8B-41B5-AD33-F72A509DB598"
+        }
+    ],
+    "name":"sidebar",
+    "typeid":52,
+    "uuid":"3C75E25D-15DC-4023-A10D-D3FEC704508E"
+}

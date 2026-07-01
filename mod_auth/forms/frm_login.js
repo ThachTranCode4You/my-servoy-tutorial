@@ -41,8 +41,9 @@ function onActionLogin(event) {
     if (checkLogin(username_val, password_val)) {
         security.login(username_val, password_val, ['Administrators']);
 //        var targetFormName = 'mod_migration$frm_migration'; 
-        application.getWindow().hide();
-        globals.goToForm(globals.MAIN_FORM, event);
+//        application.getWindow().hide();
+//        scopes.global.goToForm(scopes.global.MAIN_FORM, event);
+//        globals.goToForm(globals.MAIN_FORM, event);
 //        globals.goToForm('mod_migration$frm_migration', event);
 
      
@@ -78,8 +79,8 @@ function checkValidate(u, p) {
 function checkLogin(u, p) {
 	var query = "SELECT * FROM users WHERE user_name = ? AND user_password = md5(?)";
     var dataset = databaseManager.getDataSetByQuery('svy_security', query, [u, p], 1);
-    application.output(dataset)
-	application.output("Số lượng kết quả tìm thấy: " + dataset.getMaxRowIndex());
+//    application.output(dataset)
+//	application.output("Số lượng kết quả tìm thấy: " + dataset.getMaxRowIndex());
     return dataset.getMaxRowIndex() > 0;
     
 }

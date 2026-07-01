@@ -16,7 +16,7 @@
                             "x":512,
                             "y":193
                         },
-                        "onActionMethodID":"87C818DA-E40D-47E6-9FF3-E821FEA0234B",
+                        "onActionMethodID":"CB230EA4-37C0-4B1B-8E1F-0AC5A7AAFB9B",
                         "size":{
                             "height":30,
                             "width":80

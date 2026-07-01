@@ -1,0 +1,37 @@
+[
+{
+    "encapsulation":0,
+    "mimeType":"text/css",
+    "name":"manifest.json",
+    "typeid":37,
+    "uuid":"F1423E18-3247-45F7-A74A-9E399D7083CB"
+},
+{
+    "encapsulation":0,
+    "mimeType":"text/css",
+    "name":"project_tutorial.less",
+    "typeid":37,
+    "uuid":"9E3D637B-1BFB-4ACD-A0CA-8377E159FD63"
+},
+{
+    "encapsulation":0,
+    "mimeType":"text/css",
+    "name":"solution_properties.less",
+    "typeid":37,
+    "uuid":"88B5B3B3-5F5E-4F62-8B34-B0AFBE35965C"
+},
+{
+    "encapsulation":0,
+    "mimeType":"text/css",
+    "name":"variants.json",
+    "typeid":37,
+    "uuid":"D3ECB76D-44F7-4AB9-8FC5-DCEB6836BC8A"
+},
+{
+    "encapsulation":0,
+    "mimeType":"text/css",
+    "name":"webapp144.png",
+    "typeid":37,
+    "uuid":"7D8A07D7-71BB-4619-BFC2-29BC3FF81B14"
+}
+]

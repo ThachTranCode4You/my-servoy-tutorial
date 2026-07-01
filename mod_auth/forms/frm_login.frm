@@ -45,8 +45,8 @@
                                         "dataProviderID":"password_val",
                                         "inputType":"password",
                                         "location":{
-                                            "x":4,
-                                            "y":4
+                                            "x":5,
+                                            "y":5
                                         },
                                         "selectOnEnter":true,
                                         "size":{
@@ -55,7 +55,7 @@
                                         },
                                         "styleClass":"form-control mt-1 mb-1"
                                     },
-                                    "location":"4,4",
+                                    "location":"5,5",
                                     "name":"txt_password",
                                     "size":"140,30",
                                     "styleClass":"form-control mt-1 mb-1",
@@ -66,8 +66,8 @@
                                 {
                                     "json":{
                                         "location":{
-                                            "x":3,
-                                            "y":3
+                                            "x":4,
+                                            "y":4
                                         },
                                         "size":{
                                             "height":30,
@@ -75,7 +75,7 @@
                                         },
                                         "text":"password"
                                     },
-                                    "location":"3,3",
+                                    "location":"4,4",
                                     "name":"label_19",
                                     "size":"80,30",
                                     "typeName":"bootstrapcomponents-label",
@@ -86,8 +86,8 @@
                                     "json":{
                                         "dataProviderID":"username_val",
                                         "location":{
-                                            "x":2,
-                                            "y":2
+                                            "x":3,
+                                            "y":3
                                         },
                                         "size":{
                                             "height":30,
@@ -95,7 +95,7 @@
                                         },
                                         "styleClass":"form-control mt-1 mb-1"
                                     },
-                                    "location":"2,2",
+                                    "location":"3,3",
                                     "name":"txt_username",
                                     "size":"140,30",
                                     "styleClass":"form-control mt-1 mb-1",
@@ -106,8 +106,8 @@
                                 {
                                     "json":{
                                         "location":{
-                                            "x":1,
-                                            "y":1
+                                            "x":2,
+                                            "y":2
                                         },
                                         "size":{
                                             "height":30,
@@ -115,7 +115,7 @@
                                         },
                                         "text":"username"
                                     },
-                                    "location":"1,1",
+                                    "location":"2,2",
                                     "name":"label_17",
                                     "size":"80,30",
                                     "typeName":"bootstrapcomponents-label",
@@ -198,6 +198,57 @@
                                     "location":"6,6",
                                     "typeid":46,
                                     "uuid":"B4AA2D27-897A-47D8-830E-2615B4586313"
+                                },
+                                {
+                                    "customProperties":{
+                                        "attributes":{
+                                            "class":"row justify-content-end"
+                                        },
+                                        "properties":{
+                                            "packagename":"12grid",
+                                            "specname":"row"
+                                        }
+                                    },
+                                    "items":[
+                                        {
+                                            "customProperties":{
+                                                "attributes":{
+                                                    "class":"col-md-3"
+                                                },
+                                                "properties":{
+                                                    "packagename":"12grid",
+                                                    "specname":"column"
+                                                }
+                                            },
+                                            "items":[
+                                                {
+                                                    "json":{
+                                                        "location":{
+                                                            "x":295,
+                                                            "y":149
+                                                        },
+                                                        "media":"784DAACF-3FDE-46B9-B145-79F40029B69F",
+                                                        "size":{
+                                                            "height":80,
+                                                            "width":140
+                                                        }
+                                                    },
+                                                    "location":"295,149",
+                                                    "name":"image_2",
+                                                    "size":"140,80",
+                                                    "typeName":"bootstrapcomponents-imagemedia",
+                                                    "typeid":47,
+                                                    "uuid":"A41B5041-6A99-4CCD-87FE-7EE8473C6356"
+                                                }
+                                            ],
+                                            "location":"1,1",
+                                            "typeid":46,
+                                            "uuid":"B971B1F8-F8CF-4AE4-8E2F-09745DA5DE2B"
+                                        }
+                                    ],
+                                    "location":"1,1",
+                                    "typeid":46,
+                                    "uuid":"E926AB35-1BDA-463A-A7F5-CD68C20AE354"
                                 }
                             ],
                             "location":"463,180",

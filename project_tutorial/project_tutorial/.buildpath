@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry excluding=".stp/|medias/" kind="src" path=""/>
+	<buildpathentry exported="true" kind="prj" path="/mod_auth"/>
+	<buildpathentry exported="true" kind="prj" path="/mod_migration"/>
+	<buildpathentry exported="true" kind="prj" path="/mod_ui_base"/>
+	<buildpathentry exported="true" kind="prj" path="/svyNavigation"/>
+	<buildpathentry exported="true" kind="prj" path="/svyProperties"/>
+	<buildpathentry exported="true" kind="prj" path="/svySearch"/>
+	<buildpathentry exported="true" kind="prj" path="/svySecurity"/>
+	<buildpathentry exported="true" kind="prj" path="/svyUtils"/>
+</buildpath>

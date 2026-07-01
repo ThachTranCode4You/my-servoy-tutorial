@@ -1,0 +1,10 @@
+.login-background {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nsKY7IWGxdhGtjAHtYUxxTrQ_XBxxLLyA2cKkca4Ji669skxkvuXWyE8&s=10') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.login-box {
+	width: 400px
+}

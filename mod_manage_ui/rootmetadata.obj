@@ -1,8 +1,8 @@
 {
     "fileVersion":63,
     "mustAuthenticate":false,
-    "name":"mod_ui_admin",
+    "name":"mod_manage_ui",
     "solutionType":2048,
     "typeid":43,
-    "uuid":"A0A50DE1-09E8-4488-B5A7-0DBAD6133227"
+    "uuid":"C9F5C7F3-9211-43FF-9398-6E6938738C04"
 }
