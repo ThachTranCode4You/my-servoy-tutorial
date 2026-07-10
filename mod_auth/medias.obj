@@ -26,5 +26,19 @@
     "name":"pexels-teramots-22717670.jpg",
     "typeid":37,
     "uuid":"8BA4B4BB-6852-4DDA-8B29-D7CC76BD332D"
+},
+{
+    "encapsulation":0,
+    "mimeType":"image/jpeg",
+    "name":"rauesee.jpg",
+    "typeid":37,
+    "uuid":"16AF4E7E-A6E8-410A-A6EC-231F8938F3A6"
+},
+{
+    "encapsulation":0,
+    "mimeType":"image/png",
+    "name":"ufs_logo.png",
+    "typeid":37,
+    "uuid":"98D7F074-B6D5-42B3-A24B-DA3D6C8FE643"
 }
 ]

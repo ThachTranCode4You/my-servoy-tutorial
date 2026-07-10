@@ -269,6 +269,8 @@
     "name":"frm_login",
     "navigatorID":"-1",
     "showInMenu":true,
+    "size":"640,0",
+    "styleClass":"login-bg",
     "typeid":3,
     "uuid":"5741912C-715B-4DA2-B5DA-BD09D2EBE029"
 }
