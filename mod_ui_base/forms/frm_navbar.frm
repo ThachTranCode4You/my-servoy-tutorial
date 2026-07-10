@@ -31,6 +31,7 @@
                     "items":[
                         {
                             "json":{
+                                "brandLogo":"49B80BF6-1165-4E20-A1D3-7BC2DD34918B",
                                 "location":{
                                     "x":1,
                                     "y":1
