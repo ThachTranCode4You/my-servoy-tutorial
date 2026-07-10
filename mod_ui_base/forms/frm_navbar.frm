@@ -31,7 +31,6 @@
                     "items":[
                         {
                             "json":{
-                                "brandLogo":"784DAACF-3FDE-46B9-B145-79F40029B69F",
                                 "location":{
                                     "x":1,
                                     "y":1
@@ -75,7 +74,7 @@
                                         "svyUUID":"624C8D6D-E681-4B39-AC0D-FDFABF9ED4BE"
                                     }
                                 ],
-                                "servoyMenu":"B19013B0-AE41-4A82-B436-6D71BFEA51A4",
+                                "servoyMenu":null,
                                 "styleClass":"backgroud-nav row align-center padding-right-20 padding-left-10"
                             },
                             "location":"1,1",
