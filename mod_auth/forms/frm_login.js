@@ -68,7 +68,24 @@ function onActionLogin(event) {
 
 	if (checkLogin(username_val, password_val)) {
 		failedAttempts = 0;
-		security.login(username_val, password_val, ['Administrators']);
+
+		// Credentials are valid - hand off to svySecurity, which checks lock state
+		// and resolves the user's real roles/permissions instead of a hardcoded group
+		var user = null;
+		try {
+			user = scopes.svySecurity.getUser(username_val);
+		} catch (e) {
+			user = null;
+		}
+
+		if (user && scopes.svySecurity.login(user)) {
+			return;
+		}
+
+		// Valid credentials but svySecurity refused the session (locked account/tenant, or no permissions assigned)
+		displayError("Your account cannot log in right now. Please contact an administrator.");
+		elements.button_2.enabled = true;
+		elements.button_2.text = "Login";
 		return;
 	}
 
@@ -168,10 +185,16 @@ function checkValidate(username, password) {
  * @properties={typeid:24,uuid:"89776EA4-8CEA-4AC3-8521-5776DE636F7E"}
  */
 function checkLogin(username, password) {
-	var query = "SELECT * FROM users WHERE user_name = ? AND user_password = md5(?)";
-	var dataset = databaseManager.getDataSetByQuery('svy_security', query, [username, password], 1);
-	return dataset.getMaxRowIndex() > 0;
-
+	try {
+		var user = scopes.svySecurity.getUser(username);
+		if (!user) {
+			return false;
+		}
+		return user.checkPassword(password);
+	} catch (e) {
+		// eg. ambiguous username across multiple tenants - treat as invalid credentials
+		return false;
+	}
 }
 
 /**
