@@ -10,7 +10,7 @@
         {
             "customProperties":{
                 "attributes":{
-                    "class":"container-fluid v-100 h-100 login-background"
+                    "class":"container-fluid v-100 h-100"
                 },
                 "properties":{
                     "packagename":"12grid",
@@ -32,7 +32,7 @@
                         {
                             "customProperties":{
                                 "attributes":{
-                                    "class":"col-md-4 bg-white p-3"
+                                    "class":"col-md-4 login-card"
                                 },
                                 "properties":{
                                     "packagename":"12grid",
@@ -41,27 +41,100 @@
                             },
                             "items":[
                                 {
-                                    "json":{
-                                        "dataProviderID":"password_val",
-                                        "inputType":"password",
-                                        "location":{
-                                            "x":5,
-                                            "y":5
+                                    "customProperties":{
+                                        "attributes":{
+                                            "class":"position-relative"
                                         },
-                                        "selectOnEnter":true,
-                                        "size":{
-                                            "height":30,
-                                            "width":140
-                                        },
-                                        "styleClass":"form-control mt-1 mb-1"
+                                        "properties":{
+                                            "packagename":"12grid",
+                                            "specname":"container"
+                                        }
                                     },
+                                    "items":[
+                                        {
+                                            "customProperties":{
+                                                "attributes":{
+                                                    "autocomplete":"current-password"
+                                                }
+                                            },
+                                            "json":{
+                                                "dataProviderID":"password_val",
+                                                "inputType":"password",
+                                                "location":{
+                                                    "x":5,
+                                                    "y":5
+                                                },
+                                                "selectOnEnter":true,
+                                                "size":{
+                                                    "height":30,
+                                                    "width":140
+                                                },
+                                                "styleClass":"form-control login-pwd-input"
+                                            },
+                                            "location":"5,5",
+                                            "name":"txt_password",
+                                            "size":"140,30",
+                                            "styleClass":"form-control login-pwd-input",
+                                            "typeName":"bootstrapcomponents-textbox",
+                                            "typeid":47,
+                                            "uuid":"65678703-A450-4524-8445-E7707B843527"
+                                        },
+                                        {
+                                            "customProperties":{
+                                                "attributes":{
+                                                    "autocomplete":"current-password"
+                                                }
+                                            },
+                                            "json":{
+                                                "dataProviderID":"password_val",
+                                                "inputType":"text",
+                                                "location":{
+                                                    "x":5,
+                                                    "y":5
+                                                },
+                                                "selectOnEnter":true,
+                                                "size":{
+                                                    "height":30,
+                                                    "width":140
+                                                },
+                                                "styleClass":"form-control login-pwd-input",
+                                                "visible":false
+                                            },
+                                            "location":"5,5",
+                                            "name":"txt_password_visible",
+                                            "size":"140,30",
+                                            "styleClass":"form-control login-pwd-input",
+                                            "typeName":"bootstrapcomponents-textbox",
+                                            "typeid":47,
+                                            "uuid":"3E847F3F-1938-468F-8941-524A9AE943CF",
+                                            "visible":false
+                                        },
+                                        {
+                                            "json":{
+                                                "imageStyleClass":"fas fa-eye",
+                                                "location":{
+                                                    "x":5,
+                                                    "y":6
+                                                },
+                                                "onActionMethodID":"4588B5AC-F40E-48DB-9CFD-245F5B667A7D",
+                                                "size":{
+                                                    "height":30,
+                                                    "width":30
+                                                },
+                                                "styleClass":"login-pwd-toggle"
+                                            },
+                                            "location":"5,6",
+                                            "name":"btn_toggle_password",
+                                            "size":"30,30",
+                                            "styleClass":"login-pwd-toggle",
+                                            "typeName":"bootstrapcomponents-button",
+                                            "typeid":47,
+                                            "uuid":"9660B6C3-F6B0-4367-869A-C4FC5C5330DB"
+                                        }
+                                    ],
                                     "location":"5,5",
-                                    "name":"txt_password",
-                                    "size":"140,30",
-                                    "styleClass":"form-control mt-1 mb-1",
-                                    "typeName":"bootstrapcomponents-textbox",
-                                    "typeid":47,
-                                    "uuid":"65678703-A450-4524-8445-E7707B843527"
+                                    "typeid":46,
+                                    "uuid":"0CB6A174-F176-4165-9CD6-78A194BE635C"
                                 },
                                 {
                                     "json":{
@@ -73,7 +146,7 @@
                                             "height":30,
                                             "width":80
                                         },
-                                        "text":"password"
+                                        "text":"Password:"
                                     },
                                     "location":"4,4",
                                     "name":"label_19",
@@ -83,22 +156,28 @@
                                     "uuid":"6C0B51DF-9365-41FE-B95D-259393EA4E6D"
                                 },
                                 {
+                                    "customProperties":{
+                                        "attributes":{
+                                            "autocomplete":"username"
+                                        }
+                                    },
                                     "json":{
                                         "dataProviderID":"username_val",
                                         "location":{
                                             "x":3,
                                             "y":3
                                         },
+                                        "selectOnEnter":true,
                                         "size":{
                                             "height":30,
                                             "width":140
                                         },
-                                        "styleClass":"form-control mt-1 mb-1"
+                                        "styleClass":"form-control"
                                     },
                                     "location":"3,3",
                                     "name":"txt_username",
                                     "size":"140,30",
-                                    "styleClass":"form-control mt-1 mb-1",
+                                    "styleClass":"form-control",
                                     "typeName":"bootstrapcomponents-textbox",
                                     "typeid":47,
                                     "uuid":"76C77775-0479-4294-A0AF-99A5722A9766"
@@ -113,7 +192,7 @@
                                             "height":30,
                                             "width":80
                                         },
-                                        "text":"username"
+                                        "text":"Username:"
                                     },
                                     "location":"2,2",
                                     "name":"label_17",
@@ -155,13 +234,13 @@
                                                             "height":30,
                                                             "width":80
                                                         },
-                                                        "styleClass":"btn btn-primary",
+                                                        "styleClass":"btn btn-primary login-btn",
                                                         "text":"Login"
                                                     },
                                                     "location":"597,132",
                                                     "name":"button_2",
                                                     "size":"80,30",
-                                                    "styleClass":"btn btn-primary",
+                                                    "styleClass":"btn btn-primary login-btn",
                                                     "typeName":"bootstrapcomponents-button",
                                                     "typeid":47,
                                                     "uuid":"33B42C42-5D7A-4C22-8E8F-92298D74C5AD"
@@ -176,14 +255,14 @@
                                                             "height":30,
                                                             "width":80
                                                         },
-                                                        "styleClass":"text-danger",
+                                                        "styleClass":"text-danger login-error",
                                                         "text":"Label",
                                                         "visible":false
                                                     },
                                                     "location":"598,133",
                                                     "name":"lbl_error_message",
                                                     "size":"80,30",
-                                                    "styleClass":"text-danger",
+                                                    "styleClass":"text-danger login-error",
                                                     "typeName":"bootstrapcomponents-label",
                                                     "typeid":47,
                                                     "uuid":"8E473FD1-C68B-4066-A0F9-A0F30BC37DC4",
@@ -213,7 +292,7 @@
                                         {
                                             "customProperties":{
                                                 "attributes":{
-                                                    "class":"col-md-3"
+                                                    "class":"col-auto"
                                                 },
                                                 "properties":{
                                                     "packagename":"12grid",
@@ -227,15 +306,17 @@
                                                             "x":295,
                                                             "y":149
                                                         },
-                                                        "media":"784DAACF-3FDE-46B9-B145-79F40029B69F",
+                                                        "media":"98D7F074-B6D5-42B3-A24B-DA3D6C8FE643",
                                                         "size":{
                                                             "height":80,
                                                             "width":140
-                                                        }
+                                                        },
+                                                        "styleClass":"login-logo"
                                                     },
                                                     "location":"295,149",
                                                     "name":"image_2",
                                                     "size":"140,80",
+                                                    "styleClass":"login-logo",
                                                     "typeName":"bootstrapcomponents-imagemedia",
                                                     "typeid":47,
                                                     "uuid":"A41B5041-6A99-4CCD-87FE-7EE8473C6356"
@@ -268,6 +349,7 @@
     ],
     "name":"frm_login",
     "navigatorID":"-1",
+    "onShowMethodID":"437A9B2C-C4FE-48A8-A3D3-66B40186DA6D",
     "showInMenu":true,
     "size":"640,0",
     "styleClass":"login-bg",

@@ -1,38 +1,142 @@
-.login-bg{
-	background: url(rauesee.jpg) no-repeat center center fixed;
+/* ============================================================
+   UFS Login Page — styles
+   ============================================================ */
+
+.login-bg {
+	position: relative;
+	background: url(rauesee.jpg) no-repeat center center;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
+/* Dark gradient overlay so the white card / text pop against the photo */
+.login-bg::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, rgba(4, 30, 66, 0.55) 0%, rgba(4, 30, 66, 0.25) 55%, rgba(0, 0, 0, 0.35) 100%);
+	pointer-events: none;
+}
 
-.loginPanel{
-	background-color: white;
-	height:340px;
-	border-radius:20px;
+/* Card that holds the form */
+.login-card {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 380px;
+	background: rgba(255, 255, 255, 0.97);
+	border-radius: 14px;
+	padding: 2.25rem 2rem 2rem;
 	box-shadow:
-	  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-	  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-	  0 12.5px 10px rgba(0, 0, 0, 0.06),
-	  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-	  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-	  0 100px 80px rgba(0, 0, 0, 0.12);
-  	min-height: 200px;
- 	background: white;
-  	border-radius: 5px;
+		0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12);
+	animation: login-fade-in 0.35s ease-out;
 }
 
-.login_logo{
-	width: 400px;
-	height: 130px;
+@keyframes login-fade-in {
+	from { opacity: 0; transform: translateY(12px); }
+	to { opacity: 1; transform: translateY(0); }
 }
 
-.login_btn{
-	background-color: #4886FF;
-	color:white;
+.login-logo {
+	display: block;
+	width: 170px;
+	max-width: 100%;
+	height: auto;
 }
 
-.login-box {
-	width: 400px
+.login-card label {
+	display: block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: #1c3a5e;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin: 0 0 0.35rem;
+}
+
+.login-card .form-control {
+	border: 1px solid #d5dce5;
+	border-radius: 8px;
+	padding: 0.55rem 0.85rem;
+	margin-bottom: 1.1rem;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-card .form-control:focus {
+	border-color: #1a73c1;
+	box-shadow: 0 0 0 3px rgba(26, 115, 193, 0.15);
+	outline: none;
+}
+
+.login-card .form-control.is-invalid {
+	border-color: #dc3545;
+}
+
+.login-pwd-input {
+	padding-right: 2.25rem;
+}
+
+.login-pwd-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: transparent;
+	color: #8a97a8;
+	padding: 0;
+	z-index: 2;
+}
+
+.login-pwd-toggle:hover {
+	color: #1a73c1;
+}
+
+.login-btn {
+	background-color: #1a73c1;
+	border-color: #1a73c1;
+	padding: 0.55rem 2rem;
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	box-shadow: 0 2px 6px rgba(26, 115, 193, 0.35);
+	transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.login-btn:hover {
+	background-color: #145a99;
+	border-color: #145a99;
+	box-shadow: 0 4px 10px rgba(20, 90, 153, 0.4);
+}
+
+.login-btn:active {
+	transform: translateY(1px);
+	box-shadow: 0 1px 3px rgba(20, 90, 153, 0.4);
+}
+
+.login-error {
+	font-size: 0.85rem;
+	margin-top: 0.75rem;
+	text-align: center;
+}
+
+@media (max-width: 576px) {
+	.login-card {
+		max-width: 90%;
+		padding: 1.75rem 1.25rem;
+	}
 }
